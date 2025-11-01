@@ -1,5 +1,25 @@
 ## Development Version (Unreleased)
 
+### Added (PR #5 - Next 6 Distributions)
+- **Bodhi Linux** - Lightweight Enlightenment-based
+  - Versions: 7.0, 6.0
+  - Minimal and highly customizable
+- **Deepin** - Beautiful Chinese distribution
+  - Versions: 23, 20.9, 20.8
+  - Elegant custom desktop environment
+- **KaOS** - Independent Qt/KDE focused
+  - Latest rolling release
+  - Curated KDE Plasma experience
+- **Nitrux** - Systemd-free with Nomad desktop
+  - Latest with AppImage support
+  - Immutable system
+- **Peppermint OS** - Lightweight cloud-focused
+  - Latest, 11, 10
+  - XFCE with cloud integration
+- **Solus** - Independent rolling release
+  - Latest (Budgie, GNOME, Plasma, MATE)
+  - Curated desktop experience
+
 ### Added (PR #4 - Next 5 Popular Distributions)
 - **Linux Lite** - Beginner-friendly Windows replacement
   - Versions: 7.0, 6.6, 6.4

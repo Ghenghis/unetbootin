@@ -42,6 +42,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.kali.org/\">https://www.k
 	"<b>Description:</b> Kali Linux is an advanced penetration testing and security auditing Linux distribution with 600+ security tools.<br/>"
 	"<b>Install Notes:</b> Kali is booted in live mode; installation is optional. Default credentials: kali/kali") <<
 "2024.3" << "2024.3_x64" << "2024.3_Live_x64" << "2024.2" << "2024.2_x64" << "2024.2_Live_x64" << "2024.1" << "2024.1_x64" << "2024.1_Live_x64"));
+distroselect->addItem("Bodhi Linux", (QStringList() << "7.0_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.bodhilinux.com/\">https://www.bodhilinux.com</a><br/>"
+	"<b>Description:</b> Bodhi Linux is a lightweight Ubuntu-based distribution featuring the Moksha desktop (Enlightenment fork). Minimal, elegant, and highly customizable.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"7.0_Live_x64" << "7.0_Live" << "6.0_Live_x64" << "6.0_Live"));
 distroselect->addItem("CentOS Stream", (QStringList() << "9_Live_x64" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.centos.org/\">https://www.centos.org</a><br/>"
 	"<b>Description:</b> CentOS Stream is the continuously delivered Linux distribution that tracks just ahead of Red Hat Enterprise Linux (RHEL) development.<br/>"
@@ -73,6 +78,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.debian.org/\">https://www
 	"<b>Install Notes:</b> The NetInstall version allows for installation over FTP. If you would like to use a pre-downloaded install iso, use the HdMedia option, and then place the install iso file on the root directory of your hard drive or USB drive") <<
 "Stable_NetInstall" << "Stable_NetInstall_x64" << "Stable_HdMedia" << "Stable_HdMedia_x64" << "Testing_NetInstall" << "Testing_NetInstall_x64" << "Testing_HdMedia" << "Testing_HdMedia_x64" << "Unstable_NetInstall" << "Unstable_NetInstall_x64" << "Unstable_HdMedia" << "Unstable_HdMedia_x64"));
 //	"Stable_NetInstall" << "Stable_NetInstall_x64" << "Stable_Live" << "Testing_NetInstall" << "Testing_NetInstall_x64" << "Testing_Live" << "Unstable_NetInstall" << "Unstable_NetInstall_x64" << "Unstable_Live"));
+distroselect->addItem("Deepin", (QStringList() << "23_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.deepin.org/\">https://www.deepin.org</a><br/>"
+	"<b>Description:</b> Deepin is a beautiful Chinese-developed distribution with an elegant custom desktop environment. Features polished UI and ease of use.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"23_Live_x64" << "20.9_Live_x64" << "20.8_Live_x64"));
 distroselect->addItem("Dreamlinux", (QStringList() << "Latest_Live" <<
 unetbootin::tr("<b>Description:</b> Dreamlinux is a user-friendly Debian-based distribution.<br/>"
 	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
@@ -160,6 +170,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://support.kaspersky.com/14229/\
 	"<b>Description:</b> Kaspersky Rescue Disk detects and removes malware from your Windows installation.<br/>"
 	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which malware scans can be launched.") <<
 "10_Live" << "8_Live"));
+distroselect->addItem("KaOS", (QStringList() << "Latest_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://kaosx.us/\">https://kaosx.us</a><br/>"
+	"<b>Description:</b> KaOS is an independent distribution focused on Qt and KDE Plasma. Rolling release with carefully curated packages for KDE enthusiasts.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"Latest_Live_x64"));
     distroselect->addItem("Kubuntu", (QStringList() << "22.04_Live_x64" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.kubuntu.org/\">https://www.kubuntu.org</a><br/>"
 	"<b>Description:</b> Kubuntu is an official Ubuntu derivative featuring the KDE desktop.<br/>"
@@ -224,6 +239,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"http://www.nimblex.net/\">http://www.
 	"<b>Description:</b> NimbleX is a small, versatile Slackware-based distribution. It is built using the linux-live scripts, and features the KDE desktop. It can be booted from CD or flash memory (USB pens or MP3 players), and can easily be customized and extended.<br/>"
 	"<b>Install Notes:</b> NimbleX boots in Live mode.") <<
 "Latest_Live"));
+distroselect->addItem("Nitrux", (QStringList() << "Latest_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://nxos.org/\">https://nxos.org</a><br/>"
+	"<b>Description:</b> Nitrux is a beautiful systemd-free distribution based on Debian with the Nomad desktop (KDE Plasma-based). Features AppImage and immutable system.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"Latest_Live_x64"));
 distroselect->addItem("NTPasswd", (QStringList() << "2011.05.11" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://pogostick.net/~pnh/ntpasswd/\">https://pogostick.net/~pnh/ntpasswd/</a><br/>"
 	"<b>Description:</b> The Offline NT Password and Registry Editor can reset Windows passwords and edit the registry on Windows 2000-Vista.<br/>"
@@ -244,6 +264,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://partedmagic.com/\">https://pa
 	"<b>Description:</b> Parted Magic includes the GParted partition manager and other system utilities which can resize, copy, backup, and manipulate disk partitions.<br/>"
 	"<b>Install Notes:</b> Parted Magic is booted and run in live mode; no installation is required to use it.") <<
 "2.1_Live"));
+distroselect->addItem("Peppermint OS", (QStringList() << "Latest_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://peppermintos.com/\">https://peppermintos.com</a><br/>"
+	"<b>Description:</b> Peppermint OS is a lightweight cloud-focused distribution based on Debian with XFCE. Emphasizes web applications and cloud integration.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"Latest_Live_x64" << "11_Live_x64" << "10_Live_x64"));
 //distroselect->addItem("PCLinuxOS", (QStringList() << "KDE 2010" <<
 //unetbootin::tr("<b>Homepage:</b> <a href=\"http://www.pclinuxos.com/\">http://www.pclinuxos.com</a><br/>"
 //	"<b>Description:</b> PCLinuxOS is a user-friendly Mandriva-based distribution.<br/>"
@@ -281,6 +306,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.slax.org/\">https://www.s
 	"<b>Description:</b> Slax is a Slackware-based distribution featuring the KDE desktop.<br/>"
 	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
 "Latest_Live"));
+distroselect->addItem("Solus", (QStringList() << "Latest_Budgie_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://getsol.us/\">https://getsol.us</a><br/>"
+	"<b>Description:</b> Solus is an independent rolling release distribution. Features Budgie desktop (also available in GNOME, MATE, Plasma). Curated for desktop use.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"Latest_Budgie_x64" << "Latest_GNOME_x64" << "Latest_Plasma_x64" << "Latest_MATE_x64"));
 distroselect->addItem("SliTaz", (QStringList() << "Stable_Live" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"http://www.slitaz.org/en/\">http://www.slitaz.org/en</a><br/>"
 	"<b>Description:</b> SliTaz is a lightweight, desktop-oriented micro distribution.<br/>"

@@ -263,6 +263,20 @@ if (nameDistro == "BackTrack")
 	extractiso(isotmpf);
 }
 
+if (nameDistro == "Bodhi Linux")
+{
+	QString bodhiVersion = relname.section('_', 0, 0);
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://sourceforge.net/projects/bodhilinux/files/%1/").arg(bodhiVersion) <<
+	QString("https://mirrors.gigenet.com/OSDN/storage/g/b/bo/bodhilinux/%1/").arg(bodhiVersion)
+	, 1073741824, 3221225472, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("bodhi", Qt::CaseInsensitive) <<
+	QRegExp(bodhiVersion, Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
 if (nameDistro == "Kali Linux")
 {
 	if (isarch64)
@@ -461,6 +475,82 @@ if (nameDistro == "Debian")
 	}
 }
 
+if (nameDistro == "Bodhi")
+{
+	downloadfile(fileFilterNetDir(QStringList() <<
+	"http://www.bodhilinux.com/download/" <<
+	"http://sourceforge.net/projects/bodhilinux/files/"
+	, 524288000, 1048576000, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("bodhi", Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
+if (nameDistro == "Deepin")
+{
+	QString deepinVersion = relname.section('_', 0, 0);
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://cdimage.deepin.com/releases/%1/").arg(deepinVersion) <<
+	QString("https://mirrors.kernel.org/deepin-cd/%1/").arg(deepinVersion)
+	, 2147483648, 4294967296, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("deepin", Qt::CaseInsensitive) <<
+	QRegExp(deepinVersion, Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
+if (nameDistro == "KaOS")
+{
+	downloadfile(fileFilterNetDir(QStringList() <<
+	"http://sourceforge.net/projects/kaosx/files/" <<
+	"https://sourceforge.net/projects/kaosx/files/"
+	, 524288000, 1048576000, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("kaos", Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
+if (nameDistro == "Nitrux")
+{
+	downloadfile(fileFilterNetDir(QStringList() <<
+	"https://sourceforge.net/projects/nitrux/files/" <<
+	"https://sourceforge.net/projects/nitrux/files/"
+	, 524288000, 1048576000, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("nitrux", Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
+if (nameDistro == "Peppermint")
+{
+	downloadfile(fileFilterNetDir(QStringList() <<
+	"http://peppermintos.com/iso/" <<
+	"https://peppermintos.com/iso/"
+	, 524288000, 1048576000, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("peppermint", Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
+if (nameDistro == "Solus")
+{
+	QString solusEdition = relname.contains("Budgie") ? "Budgie" : relname.contains("GNOME") ? "GNOME" : relname.contains("Plasma") ? "Plasma" : relname.contains("MATE") ? "MATE" : "Budgie";
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://mirrors.rit.edu/solus/images/") <<
+	QString("https://mirrors.tuna.tsinghua.edu.cn/solus/images/")
+	, 2147483648, 4294967296, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("Solus", Qt::CaseInsensitive) <<
+	QRegExp(solusEdition, Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
 if (nameDistro == "Dreamlinux")
 {
 	downloadfile(fileFilterNetDir(QStringList() << 
@@ -470,7 +560,7 @@ if (nameDistro == "Dreamlinux")
 	"http://ftp.surfnet.nl/pub/os/Linux/distr/dreamlinux/stable/"
 	, 524288000, 1048576000, QList<QRegExp>() << 
 	QRegExp(".iso$", Qt::CaseInsensitive) << 
-	QRegExp("DL\\S{0,}.iso$", Qt::CaseInsensitive)
+	QRegExp("dream", Qt::CaseInsensitive)
 	), isotmpf);
 	extractiso(isotmpf);
 }
@@ -487,12 +577,28 @@ if (nameDistro == "Dr.Web AntiVirus")
 	extractiso(isotmpf);
 }
 
-if (nameDistro == "Elive")
+if (nameDistro == "Slax")
+{
+	downloadfile(fileFilterNetDir(QStringList() << 
+	"http://ftp.sh.cvut.cz/slax/" << 
+	"http://slax.linux-live.org/download/"
+	, 2097152, 524288000, QList<QRegExp>() << 
+	QRegExp(".iso$", Qt::CaseInsensitive) << 
+	QRegExp("slax", Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
+if (nameDistro == "SliTaz")
 {
 	if (relname == "unstable")
 		relname = "development";
-	downloadfile(fileFilterNetDir(QStringList() <<
-	"http://elive.icedslash.com/isos/"+relname+"/" <<
+	downloadfile(fileFilterNetDir(QStringList() << 
+	"http://elive.icedslash.com/isos/"+relname+"/" << 
+	"http://elive.leviathan-avc.com/"+relname+"/" << 
+	"http://elive.jumbef.net/"+relname+"/" << 
+	"http://elive.homogenica.com/"+relname+"/" << 
+	"http://elive.evryanz.net/isos/"+relname+"/" << 
 	"http://elive.leviathan-avc.com/"+relname+"/" <<
 	"http://elive.jumbef.net/"+relname+"/" <<
 	"http://elive.homogenica.com/"+relname+"/" <<
@@ -749,6 +855,19 @@ if (nameDistro == "Gujin")
 	downloadfile(QString("http://downloads.sourceforge.net/sourceforge/lubi/gujin-%1.img.gz").arg(relname), QString("%1ubninit").arg(targetPath), 81920);
 }
 
+if (nameDistro == "KaOS")
+{
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://mirror.kaosx.us/ISO/") <<
+	QString("https://sourceforge.net/projects/kaosx/files/ISO/")
+	, 2147483648, 4294967296, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("KaOS", Qt::CaseInsensitive) <<
+	QRegExp("x86_64", Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
 if (nameDistro == "KDE neon")
 {
 	downloadfile(fileFilterNetDir(QStringList() <<
@@ -958,6 +1077,19 @@ if (nameDistro == "NimbleX")
 	extractiso(isotmpf);
 }
 
+if (nameDistro == "Nitrux")
+{
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://sourceforge.net/projects/nitruxos/files/Release/ISO/") <<
+	QString("https://mirrors.ocf.berkeley.edu/nitrux/ISO/")
+	, 2147483648, 4294967296, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("nitrux", Qt::CaseInsensitive) <<
+	QRegExp("amd64", Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
 if (nameDistro == "NTPasswd")
 {
 	downloadfile(QString("http://downloads.sourceforge.net/sourceforge/lubi/ntpasswd-%1-kernel").arg(relname), QString("%1ubnkern").arg(targetPath));
@@ -1009,6 +1141,19 @@ if (nameDistro == "Parted Magic")
 	downloadfile("http://downloads.sourceforge.net/sourceforge/lubi/partedmagic-2.1-kernel", QString("%1ubnkern").arg(targetPath));
 	downloadfile("http://downloads.sourceforge.net/sourceforge/lubi/partedmagic-2.1-initrd", QString("%1ubninit").arg(targetPath));
 	kernelOpts = "noapic root=/dev/ram0 init=/linuxrc ramdisk_size=200000 keymap=us liveusb vga=791 quiet toram";
+}
+
+if (nameDistro == "Peppermint OS")
+{
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://peppermintos.com/ISO/") <<
+	QString("https://sourceforge.net/projects/peppermintos/files/")
+	, 1073741824, 3221225472, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("Peppermint", Qt::CaseInsensitive) <<
+	QRegExp("amd64", Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
 }
 
 if (nameDistro == "PCLinuxOS")
