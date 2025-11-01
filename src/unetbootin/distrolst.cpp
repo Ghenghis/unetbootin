@@ -491,6 +491,21 @@ if (nameDistro == "Elive")
 	extractiso(isotmpf);
 }
 
+if (nameDistro == "Elementary OS")
+{
+	QString elemVersion = relname.section('_', 0, 0);
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://ams3.dl.elementary.io/download/") <<
+	QString("https://fra1.dl.elementary.io/download/") <<
+	QString("https://nyc3.dl.elementary.io/download/")
+	, 2147483648, 4294967296, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("elementary", Qt::CaseInsensitive) <<
+	QRegExp(elemVersion, Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
 if (nameDistro == "Fedora")
 {
 	if (isarch64)
@@ -772,6 +787,22 @@ if (nameDistro == "Mandriva")
 	}
 }
 
+if (nameDistro == "Manjaro")
+{
+	QString manjaroVersion = relname.section('_', 0, 0);
+	QString manjaroEdition = relname.contains("KDE") ? "kde" : relname.contains("XFCE") ? "xfce" : relname.contains("GNOME") ? "gnome" : "xfce";
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://download.manjaro.org/%1/").arg(manjaroEdition) <<
+	QString("https://mirrors.ocf.berkeley.edu/manjaro/stable/%1/").arg(manjaroEdition)
+	, 2147483648, 4294967296, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("manjaro", Qt::CaseInsensitive) <<
+	QRegExp(manjaroVersion, Qt::CaseInsensitive) <<
+	QRegExp(manjaroEdition, Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
 if (nameDistro == "MEPIS")
 {
 	if (isarch64)
@@ -811,6 +842,21 @@ if (nameDistro == "MEPIS")
 		QRegExp("\\S{0,}"+cpuarch+".iso$", Qt::CaseInsensitive)
 		), isotmpf);
 	}
+	extractiso(isotmpf);
+}
+
+if (nameDistro == "MX Linux")
+{
+	QString mxVersion = relname.section('_', 0, 0);
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://sourceforge.net/projects/mx-linux/files/Final/MX-%1/").arg(mxVersion) <<
+	QString("https://mirrors.gigenet.com/OSDN//storage/g/m/mx/mx-linux/Final/MX-%1/").arg(mxVersion)
+	, 1073741824, 3221225472, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("MX", Qt::CaseInsensitive) <<
+	QRegExp(mxVersion, Qt::CaseInsensitive) <<
+	QRegExp("x64", Qt::CaseInsensitive)
+	), isotmpf);
 	extractiso(isotmpf);
 }
 
@@ -923,6 +969,22 @@ if (nameDistro == "Puppy Linux")
 	QRegExp(".iso$", Qt::CaseInsensitive) << 
 	QRegExp("^puppy-\\d{1,}\\S{1,}.iso$", Qt::CaseInsensitive) << 
 	QRegExp("^puppy-4\\S{1,}.iso$", Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
+if (nameDistro == "Pop!_OS")
+{
+	QString popVersion = relname.section('_', 0, 0);
+	QString popVariant = relname.contains("NVIDIA") ? "nvidia" : "intel";
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://iso.pop-os.org/%1/amd64/").arg(popVersion) <<
+	QString("https://pop-iso.sfo2.cdn.digitaloceanspaces.com/%1/amd64/").arg(popVersion)
+	, 2147483648, 4294967296, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("pop-os", Qt::CaseInsensitive) <<
+	QRegExp(popVersion, Qt::CaseInsensitive) <<
+	QRegExp(popVariant, Qt::CaseInsensitive)
 	), isotmpf);
 	extractiso(isotmpf);
 }
@@ -1304,6 +1366,23 @@ if (nameDistro == "Xubuntu")
 if (nameDistro == "Zenwalk")
 {
 	downloadfile(QString("ftp://zenwalk.mirrors.tds.net/pub/linux/zenlive/zenwalk-live-%1.iso").arg(relname), isotmpf);
+	extractiso(isotmpf);
+}
+
+if (nameDistro == "Zorin OS")
+{
+	QString zorinVersion = relname.section('_', 0, 0);
+	QString zorinEdition = relname.contains("Core") ? "Core" : relname.contains("Lite") ? "Lite" : "Core";
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://sourceforge.net/projects/zorinos/files/%1/").arg(zorinVersion) <<
+	QString("https://mirrors.gigenet.com/OSDN//storage/g/z/zo/zorinos/%1/").arg(zorinVersion)
+	, 2147483648, 4294967296, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("Zorin", Qt::CaseInsensitive) <<
+	QRegExp(zorinVersion, Qt::CaseInsensitive) <<
+	QRegExp(zorinEdition, Qt::CaseInsensitive) <<
+	QRegExp("64", Qt::CaseInsensitive)
+	), isotmpf);
 	extractiso(isotmpf);
 }
 

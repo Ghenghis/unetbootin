@@ -1,6 +1,23 @@
 ## Development Version (Unreleased)
 
-### Added
+### Added (PR #3 - Top 5 Popular Distributions)
+- **MX Linux** - #1 on DistroWatch
+  - Versions: 23.2, 23.1, 23.0
+  - Debian-based with Xfce, KDE, or Fluxbox
+- **Pop!_OS** - System76's developer/gaming distribution
+  - Versions: 22.04 (Intel/AMD and NVIDIA variants)
+  - Excellent NVIDIA support, tiling window management
+- **Manjaro** - User-friendly Arch Linux
+  - Version: 23.1 (KDE, XFCE, GNOME editions)
+  - Rolling release with great hardware support
+- **Elementary OS** - macOS-like interface
+  - Versions: 7.1, 7.0
+  - Beautiful Pantheon desktop environment
+- **Zorin OS** - Windows-like for easy switching
+  - Versions: 17 Core/Lite, 16
+  - Familiar interface for Windows users
+
+### Added (PR #1-2)
 - **CentOS Stream** support (versions 9 and 10) to replace legacy CentOS
   - Updated mirror URLs to official CentOS Stream repositories
   - Both LiveCD and NetInstall modes supported

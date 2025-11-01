@@ -82,6 +82,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.elivecd.org/\">https://ww
 	"<b>Description:</b> Elive is a Debian-based distribution featuring the Enlightenment window manager.<br/>"
 	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
 "Stable_Live"));
+distroselect->addItem("Elementary OS", (QStringList() << "7.1_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://elementary.io/\">https://elementary.io</a><br/>"
+	"<b>Description:</b> Elementary OS is a beautiful, fast, and open replacement for macOS and Windows. Built on Ubuntu with the Pantheon desktop environment.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"7.1_Live_x64" << "7.0_Live_x64"));
 distroselect->addItem("Fedora", (QStringList() << "41_Live_x64" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://getfedora.org/\">https://getfedora.org</a><br/>"
 	"<b>Description:</b> Fedora is a Red Hat sponsored community distribution which showcases the latest cutting-edge free/open-source software.<br/>"
@@ -165,10 +170,20 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.openmandriva.org/\">https
 	"<b>Description:</b> Mandriva is a user-friendly distro formerly known as Mandrake Linux.<br/>"
 	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched. The NetInstall version allows for installation over the internet (FTP) or via pre-downloaded <a href=\"http://www.mandriva.com/en/download\">\"Free\" iso image files</a>.") <<
 "2008.0_NetInstall" << "2008.0_NetInstall_x64" << "2008.1_NetInstall" << "2008.1_NetInstall_x64"));
+distroselect->addItem("Manjaro", (QStringList() << "23.1_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://manjaro.org/\">https://manjaro.org</a><br/>"
+	"<b>Description:</b> Manjaro is a user-friendly Arch Linux derivative with rolling releases. Features multiple desktop environments and excellent hardware support.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"23.1_Live_x64" << "23.1_KDE_x64" << "23.1_XFCE_x64" << "23.1_GNOME_x64"));
 distroselect->addItem("MEPIS", (QStringList() << "SimplyMEPIS" <<
 unetbootin::tr("<b>Description:</b> MEPIS is a Debian-based distribution. SimplyMEPIS is a user-friendly version based on KDE, while AntiX is a lightweight version for older computers.<br/>"
 	"<b>Install Notes:</b> MEPIS supports booting in Live mode, from which the installer can optionally be launched.") <<
 	"SimplyMEPIS" << "SimplyMEPIS_x64" << "AntiX"));
+distroselect->addItem("MX Linux", (QStringList() << "23.2_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://mxlinux.org/\">https://mxlinux.org</a><br/>"
+	"<b>Description:</b> MX Linux is the #1 ranked distribution on DistroWatch. Based on Debian stable with Xfce, KDE, or Fluxbox desktops. Known for stability and excellent performance.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"23.2_Live_x64" << "23.1_Live_x64" << "23.0_Live_x64"));
 distroselect->addItem("NetbootCD", (QStringList() << "Latest" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://netbootcd.us/\">https://netbootcd.us/</a><br/>"
 	"<b>Description:</b> NetbootCD is a small boot CD that downloads and boots network-based installers for other distributions.<br/>"
@@ -214,6 +229,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"http://www.puppylinux.com/\">http://w
 	"<b>Description:</b> Puppy Linux is a lightweight distribution designed for older computers.<br/>"
 	"<b>Install Notes:</b> The Live version loads the entire system into RAM and boots from memory, so installation is not required but optional.") <<
 	"Latest_Live"));
+distroselect->addItem("Pop!_OS", (QStringList() << "22.04_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://pop.system76.com/\">https://pop.system76.com</a><br/>"
+	"<b>Description:</b> Pop!_OS is developed by System76 for STEM and creative professionals. Based on Ubuntu with custom desktop, excellent NVIDIA support, and tiling window management.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched. Choose NVIDIA or AMD/Intel version.") <<
+"22.04_Live_x64" << "22.04_NVIDIA_x64" << "22.04_Intel_AMD_x64"));
 distroselect->addItem("Sabayon Linux", (QStringList() << "5.2" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.sabayon.org/\">https://www.sabayon.org</a><br/>"
 	"<b>Description:</b> Sabayon Linux is a Gentoo-based Live DVD distribution which features the Entropy binary package manager in addition to the source-based Portage.<br/>"
@@ -280,6 +300,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://zenwalkgnulinux.blogspot.com/
 	"<b>Description:</b> Zenwalk is a Slackware-based distribution featuring the XFCE desktop.<br/>"
 	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
 "5.2"));
+distroselect->addItem("Zorin OS", (QStringList() << "17_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://zorin.com/os/\">https://zorin.com/os</a><br/>"
+	"<b>Description:</b> Zorin OS is designed for Windows users switching to Linux. Features a familiar Windows-like interface with excellent out-of-the-box functionality.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"17_Live_x64" << "17_Core_x64" << "17_Lite_x64" << "16_Live_x64"));
 distroselect->addItem("3CX", (QStringList() << "pbx_debian_x64" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.3cx.com/\">https://www.3cx.com</a><br/>"
     "<b>Description:</b> 3CX is a specialist, Debian-based Linux distribution designed to run a complete unified communications platform. It provides a complete open standards-based IP PBX and phone system that works with popular SIP trunks and IP phones. It will automatically configure all supported peripherals and it also comes with clients for Windows, OS X, iOS and Android. The ISO image includes a free license for the 3CX PBX edition.<br/>") <<
