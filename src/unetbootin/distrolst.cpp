@@ -249,6 +249,38 @@ if (nameDistro == "BackTrack")
 	extractiso(isotmpf);
 }
 
+if (nameDistro == "Kali Linux")
+{
+	if (isarch64)
+	{
+		cpuarch = "amd64";
+	}
+	else
+	{
+		cpuarch = "i386";
+	}
+	
+	QString kaliVersion = relname.section('_', 0, 0);
+	
+	if (islivecd)
+	{
+		downloadfile(fileFilterNetDir(QStringList() <<
+		QString("https://cdimage.kali.org/kali-%1/").arg(kaliVersion) <<
+		QString("https://kali.download/base-images/kali-%1/").arg(kaliVersion)
+		, 2147483648, 4294967296, QList<QRegExp>() <<
+		QRegExp(".iso$", Qt::CaseInsensitive) <<
+		QRegExp(QString("kali-linux.*live.*%1.iso$").arg(cpuarch))
+		), isotmpf);
+		extractiso(isotmpf);
+	}
+	else
+	{
+		downloadfile(QString("https://http.kali.org/kali/dists/kali-rolling/main/installer-%1/current/images/netboot/debian-installer/%1/linux").arg(cpuarch), QString("%1ubnkern").arg(targetPath));
+		downloadfile(QString("https://http.kali.org/kali/dists/kali-rolling/main/installer-%1/current/images/netboot/debian-installer/%1/initrd.gz").arg(cpuarch), QString("%1ubninit").arg(targetPath));
+		postinstmsg = unetbootin::tr("\n*IMPORTANT* After rebooting, select 'Install' from the boot menu. Network installation will proceed from Kali repositories. Default credentials for live mode: kali/kali");
+	}
+}
+
 if (nameDistro == "CentOS Stream")
 {
 	if (isarch64)

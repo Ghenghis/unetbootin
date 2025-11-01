@@ -13,6 +13,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 "18.04_NetInstall" << "18.04_NetInstall_x64" << "18.04_HdMedia" << "18.04_HdMedia_x64" << "18.04_Live_x64" << \
 "20.04_Live_x64" << \
 "22.04_Live_x64" << \
+"24.04_Live_x64" << \
 "Daily_Live" << "Daily_Live_x64"
 #endif
 
@@ -31,6 +32,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.backtrack-linux.org/\">ht
 	"<b>Description:</b> BackTrack is a distribution focused on network analysis and penetration testing.<br/>"
 	"<b>Install Notes:</b> BackTrack is booted and run in live mode; no installation is required to use it.") <<
 "5R1-GNOME" << "5R1-GNOME_x64" << "5R1-KDE" << "5R1-KDE_x64"));
+distroselect->addItem("Kali Linux", (QStringList() << "2024.3_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.kali.org/\">https://www.kali.org/</a><br/>"
+	"<b>Description:</b> Kali Linux is an advanced penetration testing and security auditing Linux distribution with 600+ security tools.<br/>"
+	"<b>Install Notes:</b> Kali is booted in live mode; installation is optional. Default credentials: kali/kali") <<
+"2024.3" << "2024.3_x64" << "2024.3_Live_x64" << "2024.2" << "2024.2_x64" << "2024.2_Live_x64" << "2024.1" << "2024.1_x64" << "2024.1_Live_x64"));
 distroselect->addItem("CentOS Stream", (QStringList() << "9_Live_x64" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.centos.org/\">https://www.centos.org</a><br/>"
 	"<b>Description:</b> CentOS Stream is the continuously delivered Linux distribution that tracks just ahead of Red Hat Enterprise Linux (RHEL) development.<br/>"
@@ -76,11 +82,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.elivecd.org/\">https://ww
 	"<b>Description:</b> Elive is a Debian-based distribution featuring the Enlightenment window manager.<br/>"
 	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
 "Stable_Live"));
-distroselect->addItem("Fedora", (QStringList() << "30_Live_x64" <<
+distroselect->addItem("Fedora", (QStringList() << "41_Live_x64" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://getfedora.org/\">https://getfedora.org</a><br/>"
 	"<b>Description:</b> Fedora is a Red Hat sponsored community distribution which showcases the latest cutting-edge free/open-source software.<br/>"
 	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched. The NetInstall version allows for both installation over the internet (FTP), or offline installation using pre-downloaded installation ISO files.") <<
-	"24_NetInstall" << "24_NetInstall_x64" << "24_Live" << "24_Live_x64" << "25_NetInstall" << "25_NetInstall_x64" << "25_Live" << "25_Live_x64" << "26_NetInstall_x64" << "26_Live_x64" << "27_NetInstall_x64" << "27_Live_x64" << "28_NetInstall_x64" << "28_Live_x64" << "29_NetInstall_x64" << "29_Live_x64" << "30_NetInstall_x64" << "30_Live_x64" << "Rawhide_NetInstall_x64"));
+	"24_NetInstall" << "24_NetInstall_x64" << "24_Live" << "24_Live_x64" << "25_NetInstall" << "25_NetInstall_x64" << "25_Live" << "25_Live_x64" << "26_NetInstall_x64" << "26_Live_x64" << "27_NetInstall_x64" << "27_Live_x64" << "28_NetInstall_x64" << "28_Live_x64" << "29_NetInstall_x64" << "29_Live_x64" << "30_NetInstall_x64" << "30_Live_x64" << "39_NetInstall_x64" << "39_Live_x64" << "40_NetInstall_x64" << "40_Live_x64" << "41_NetInstall_x64" << "41_Live_x64" << "Rawhide_NetInstall_x64"));
 distroselect->addItem("FreeBSD", (QStringList() << "8.0" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.freebsd.org/\">https://www.freebsd.org</a><br/>"
 	"<b>Description:</b> FreeBSD is a general-purpose Unix-like operating system designed for scalability and performance.<br/>"
@@ -144,11 +150,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://linuxconsole.org/\">https://l
  "<b>Description:</b> LinuxConsole is a desktop distro to play games, easy to install, easy to use and fast to boot .<br/>"
  "<b>Install Notes:</b> The 1.0.2010 is latest 1.0, now available on rolling release (run liveuptate to update modules and kernel).") <<
  "1.0.2010-cd"));
-    distroselect->addItem("Linux Mint", (QStringList() << "19.2_Live" <<
+    distroselect->addItem("Linux Mint", (QStringList() << "22_Live_x64" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://linuxmint.com/\">https://linuxmint.com</a><br/>"
 	"<b>Description:</b> Linux Mint is a user-friendly Ubuntu-based distribution which includes additional proprietary codecs and other software by default.<br/>"
 	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
-    "19.2_Live" << "19.2_Live_x64"<<"19.3_Live"<<"19.3_Live_x64"<<"20_Live_x64"<<"20.1_Live_x64"<<"20.2_Live_x64"<<"20.3_Live_x64"<<"21_Live_x64"<<"21.1_Live_x64"));
+    "19.2_Live" << "19.2_Live_x64"<<"19.3_Live"<<"19.3_Live_x64"<<"20_Live_x64"<<"20.1_Live_x64"<<"20.2_Live_x64"<<"20.3_Live_x64"<<"21_Live_x64"<<"21.1_Live_x64"<<"21.2_Live_x64"<<"21.3_Live_x64"<<"22_Live_x64"));
 distroselect->addItem("Lubuntu", (QStringList() << "22.04_Live_x64" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.lubuntu.net/\">https://www.lubuntu.net</a><br/>"
 	"<b>Description:</b> Lubuntu is an official Ubuntu derivative featuring the LXDE desktop.<br/>"
@@ -183,11 +189,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://pogostick.net/~pnh/ntpasswd/\
 	"<b>Description:</b> The Offline NT Password and Registry Editor can reset Windows passwords and edit the registry on Windows 2000-Vista.<br/>"
 	"<b>Install Notes:</b> NTPasswd is booted and run in live mode; no installation is required to use it.") <<
 "2008.05.26" << "2011.05.11"));
-	distroselect->addItem("openSUSE", (QStringList() << "11.1" <<
+	distroselect->addItem("openSUSE", (QStringList() << "Leap-15.6_x64" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.opensuse.org/\">https://www.opensuse.org</a><br/>"
-	"<b>Description:</b> openSUSE is a user-friendly Novell sponsored distribution.<br/>"
+	"<b>Description:</b> openSUSE is a user-friendly SUSE-sponsored distribution. Leap provides stable releases, Tumbleweed is rolling.<br/>"
 	"<b>Install Notes:</b> The default version allows for both installation over the internet (FTP), or offline installation using pre-downloaded installation ISO files.") <<
-	"11.1" << "11.1_x64" << "Factory" << "Factory_x64"));
+	"11.1" << "11.1_x64" << "Leap-15.5_x64" << "Leap-15.6_x64" << "Tumbleweed_x64" << "Factory" << "Factory_x64"));
 distroselect->addItem("Ophcrack", (QStringList() << "XP-LiveCD-2.0" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"http://ophcrack.sourceforge.net/\">http://ophcrack.sourceforge.net</a><br/>"
 	"<b>Description:</b> Ophcrack can crack Windows passwords.<br/>"

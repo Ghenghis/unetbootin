@@ -13,10 +13,21 @@
   - Community-owned, forever-free RHEL-compatible distribution
   - Official mirror integration
   - Both LiveCD and NetInstall modes supported
+- **Kali Linux** - Modern penetration testing distribution
+  - Versions: 2024.3, 2024.2, 2024.1
+  - Both LiveCD and NetInstall modes
+  - Replaces discontinued BackTrack (which remains for legacy users)
+
+### Updated
+- **Ubuntu/Kubuntu/Lubuntu/Xubuntu** - Added 24.04 LTS (Noble Numbat)
+- **Fedora** - Added versions 39, 40, 41
+- **Linux Mint** - Added versions 21.2, 21.3, 22
+- **openSUSE** - Added Leap 15.5, 15.6, Tumbleweed
 
 ### Changed
 - Replaced legacy CentOS (versions 4-8) with CentOS Stream
 - Updated distribution download logic to support current RHEL ecosystem mirrors
+- **Collection approach**: Old versions kept while adding new ones for maximum compatibility
 
 ## 700
 
