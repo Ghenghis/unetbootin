@@ -235,6 +235,20 @@ if (nameDistro == "Arch Linux")
 	extractiso(isotmpf);
 }
 
+if (nameDistro == "antiX")
+{
+	QString antiXVersion = relname.section('_', 0, 0);
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://sourceforge.net/projects/antix-linux/files/Final/antiX-%1/").arg(antiXVersion) <<
+	QString("https://mirrors.gigenet.com/OSDN/storage/g/a/an/antix-linux/Final/antiX-%1/").arg(antiXVersion)
+	, 524288000, 2147483648, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("antiX", Qt::CaseInsensitive) <<
+	QRegExp(antiXVersion, Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
 if (nameDistro == "BackTrack")
 {
 	if (isarch64)
@@ -506,6 +520,19 @@ if (nameDistro == "Elementary OS")
 	extractiso(isotmpf);
 }
 
+if (nameDistro == "EndeavourOS")
+{
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://github.com/endeavouros-team/ISO/releases/latest/download/") <<
+	QString("https://mirror.alpix.eu/endeavouros/iso/")
+	, 2147483648, 3221225472, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("EndeavourOS", Qt::CaseInsensitive) <<
+	QRegExp("x86_64", Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
 if (nameDistro == "Fedora")
 {
 	if (isarch64)
@@ -647,6 +674,19 @@ if (nameDistro == "GeeXboX")
 	extractiso(isotmpf);
 }
 
+if (nameDistro == "Garuda Linux")
+{
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://iso.builds.garudalinux.org/iso/latest/garuda/") <<
+	QString("https://mirror.alpix.eu/garuda/iso/latest/garuda/")
+	, 2147483648, 4294967296, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("garuda", Qt::CaseInsensitive) <<
+	QRegExp("linux", Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
 if (nameDistro == "Gentoo")
 {
 	if (isarch64)
@@ -709,6 +749,19 @@ if (nameDistro == "Gujin")
 	downloadfile(QString("http://downloads.sourceforge.net/sourceforge/lubi/gujin-%1.img.gz").arg(relname), QString("%1ubninit").arg(targetPath), 81920);
 }
 
+if (nameDistro == "KDE neon")
+{
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://files.kde.org/neon/images/user/current/") <<
+	QString("https://mirror.accum.se/mirror/kde.org/neon/images/user/current/")
+	, 2147483648, 4294967296, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("neon-user", Qt::CaseInsensitive) <<
+	QRegExp("current", Qt::CaseInsensitive)
+	), isotmpf);
+	extractiso(isotmpf);
+}
+
 if (nameDistro == "LinuxConsole")
 {
   downloadfile(QString("http://jukebox.linuxconsole.org/official/linuxconsole%1.iso").arg(QString(relname)), isotmpf);
@@ -755,6 +808,21 @@ if (nameDistro == "Linux Mint")
 //	QString("ftp://ftp.tpnet.pl/pub/linux/linuxmint/isos/stable/%1/").arg(relname) <<
 //	QString("ftp://mirror.unej.ac.id/pub/iso/linux-mint/stable/%1/").arg(relname)
 	, 61440000, 1048576000, mintregex), isotmpf);
+	extractiso(isotmpf);
+}
+
+if (nameDistro == "Linux Lite")
+{
+	QString liteVersion = relname.section('_', 0, 0);
+	downloadfile(fileFilterNetDir(QStringList() <<
+	QString("https://sourceforge.net/projects/linux-lite/files/%1/").arg(liteVersion) <<
+	QString("https://mirrors.gigenet.com/OSDN/storage/g/l/li/linux-lite/%1/").arg(liteVersion)
+	, 1073741824, 3221225472, QList<QRegExp>() <<
+	QRegExp(".iso$", Qt::CaseInsensitive) <<
+	QRegExp("linux-lite", Qt::CaseInsensitive) <<
+	QRegExp(liteVersion, Qt::CaseInsensitive) <<
+	QRegExp("64bit", Qt::CaseInsensitive)
+	), isotmpf);
 	extractiso(isotmpf);
 }
 

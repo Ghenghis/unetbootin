@@ -1,5 +1,22 @@
 ## Development Version (Unreleased)
 
+### Added (PR #4 - Next 5 Popular Distributions)
+- **Linux Lite** - Beginner-friendly Windows replacement
+  - Versions: 7.0, 6.6, 6.4
+  - Lightweight XFCE desktop
+- **EndeavourOS** - Arch Linux made easy
+  - Latest rolling release
+  - Friendly installer and community
+- **Garuda Linux** - Gaming-focused Arch derivative
+  - Latest with KDE, GNOME, XFCE editions
+  - Gaming optimizations and Btrfs snapshots
+- **KDE neon** - Latest KDE Plasma on Ubuntu base
+  - Latest User/Testing editions
+  - Always newest KDE software
+- **antiX** - Fast, lightweight, systemd-free
+  - Versions: 23, 22
+  - Perfect for older computers
+
 ### Added (PR #3 - Top 5 Popular Distributions)
 - **MX Linux** - #1 on DistroWatch
   - Versions: 23.2, 23.1, 23.0

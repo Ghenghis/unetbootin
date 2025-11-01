@@ -27,6 +27,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.archlinux.org/\">https://
 	"<b>Description:</b> Arch Linux is a lightweight distribution optimized for speed and flexibility.<br/>"
 	"<b>Install Notes:</b> The default version allows for installation over the internet (FTP).") <<
 "core" << "core_x64" << "netinstall" << "netinstall_x64"));
+distroselect->addItem("antiX", (QStringList() << "23_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://antixlinux.com/\">https://antixlinux.com</a><br/>"
+	"<b>Description:</b> antiX is a fast, lightweight systemd-free Linux distribution based on Debian. Perfect for older computers and systems with limited resources.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"23_Live_x64" << "23_Live" << "22_Live_x64" << "22_Live"));
 distroselect->addItem("BackTrack", (QStringList() << "5R1-GNOME" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.backtrack-linux.org/\">https://www.backtrack-linux.org/</a><br/>"
 	"<b>Description:</b> BackTrack is a distribution focused on network analysis and penetration testing.<br/>"
@@ -87,6 +92,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://elementary.io/\">https://elem
 	"<b>Description:</b> Elementary OS is a beautiful, fast, and open replacement for macOS and Windows. Built on Ubuntu with the Pantheon desktop environment.<br/>"
 	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
 "7.1_Live_x64" << "7.0_Live_x64"));
+distroselect->addItem("EndeavourOS", (QStringList() << "Latest_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://endeavouros.com/\">https://endeavouros.com</a><br/>"
+	"<b>Description:</b> EndeavourOS is a rolling release based on Arch Linux with a friendly installer and helpful community. Arch made easy for beginners.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"Latest_Live_x64"));
 distroselect->addItem("Fedora", (QStringList() << "41_Live_x64" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://getfedora.org/\">https://getfedora.org</a><br/>"
 	"<b>Description:</b> Fedora is a Red Hat sponsored community distribution which showcases the latest cutting-edge free/open-source software.<br/>"
@@ -120,6 +130,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://frugalware.org/\">https://fru
 distroselect->addItem("GeeXboX", (QStringList() << "2.0-i386" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.geexbox.org/\">https://www.geexbox.org</a><br/>"
                "<b>Description:</b> GeeXboX is an Embedded Linux Media Center Distribution.<br/>") << "2.0-i386" << "2.0-x86_64"));
+distroselect->addItem("Garuda Linux", (QStringList() << "Latest_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://garudalinux.org/\">https://garudalinux.org</a><br/>"
+	"<b>Description:</b> Garuda Linux is an Arch-based distribution focused on gaming and performance. Features beautiful themes, gaming optimizations, and Btrfs snapshots.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"Latest_Live_x64" << "Latest_KDE_x64" << "Latest_GNOME_x64" << "Latest_XFCE_x64"));
 //distroselect->addItem("Gentoo", (QStringList() << "2008.0_Live" <<
 //unetbootin::tr("<b>Homepage:</b> <a href=\"http://www.gentoo.org/\">http://www.gentoo.org</a><br/>"
 //	"<b>Description:</b> Gentoo is a flexible source-based distribution designed for advanced users.<br/>"
@@ -150,6 +165,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.kubuntu.org/\">https://ww
 	"<b>Description:</b> Kubuntu is an official Ubuntu derivative featuring the KDE desktop.<br/>"
 	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched. The NetInstall version allows for installation over FTP, and can install Kubuntu and other official Ubuntu derivatives. If you would like to use a pre-downloaded alternate (not desktop) install iso, use the HdMedia option, and then place the alternate install iso file on the root directory of your hard drive or USB drive") <<
 ubuntuverlist));
+distroselect->addItem("KDE neon", (QStringList() << "Latest_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://neon.kde.org/\">https://neon.kde.org</a><br/>"
+	"<b>Description:</b> KDE neon provides the latest KDE Plasma desktop and applications on top of a stable Ubuntu base. Always get the newest KDE software.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"Latest_Live_x64" << "Latest_User_x64" << "Latest_Testing_x64"));
 	distroselect->addItem("LinuxConsole", (QStringList() << "1.0.2010-cd" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://linuxconsole.org/\">https://linuxconsole.org</a><br/>"
  "<b>Description:</b> LinuxConsole is a desktop distro to play games, easy to install, easy to use and fast to boot .<br/>"
@@ -160,6 +180,11 @@ unetbootin::tr("<b>Homepage:</b> <a href=\"https://linuxmint.com/\">https://linu
 	"<b>Description:</b> Linux Mint is a user-friendly Ubuntu-based distribution which includes additional proprietary codecs and other software by default.<br/>"
 	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
     "19.2_Live" << "19.2_Live_x64"<<"19.3_Live"<<"19.3_Live_x64"<<"20_Live_x64"<<"20.1_Live_x64"<<"20.2_Live_x64"<<"20.3_Live_x64"<<"21_Live_x64"<<"21.1_Live_x64"<<"21.2_Live_x64"<<"21.3_Live_x64"<<"22_Live_x64"));
+distroselect->addItem("Linux Lite", (QStringList() << "7.0_Live_x64" <<
+unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.linuxliteos.com/\">https://www.linuxliteos.com</a><br/>"
+	"<b>Description:</b> Linux Lite is a beginner-friendly Ubuntu-based distribution designed as a Windows replacement. Features lightweight XFCE desktop.<br/>"
+	"<b>Install Notes:</b> The Live version allows for booting in Live mode, from which the installer can optionally be launched.") <<
+"7.0_Live_x64" << "6.6_Live_x64" << "6.4_Live_x64"));
 distroselect->addItem("Lubuntu", (QStringList() << "22.04_Live_x64" <<
 unetbootin::tr("<b>Homepage:</b> <a href=\"https://www.lubuntu.net/\">https://www.lubuntu.net</a><br/>"
 	"<b>Description:</b> Lubuntu is an official Ubuntu derivative featuring the LXDE desktop.<br/>"
